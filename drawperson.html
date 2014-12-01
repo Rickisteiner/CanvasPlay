@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="drawstyle.css">
+
+  <meta name="description" content="Trying out some CSS and canvas">
+  <meta name="keywords" content="CSS,HTML,Canvas">
+</head>
+
+<body>
+
+<header>
+  <h1>My Stick Canvas</h2>
+</header>
+
+  <div class="person">
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  //mouth
+  ctx.beginPath();
+  ctx.moveTo(246,55);
+  ctx.arc(200,55,45,0,Math.PI*2,true);
+  //right eye
+  ctx.moveTo(185,40);
+  ctx.arc(180,40,5,0,Math.PI*2,true);
+  //left eye
+  ctx.moveTo(225,40);
+  ctx.arc(220,40,5,0,Math.PI*2,true);
+  //head
+  ctx.moveTo(220,65);
+  ctx.arc(200,65,20,0,Math.PI,false);
+  //body
+  ctx.moveTo(200, 100);
+  ctx.lineTo(200, 300);
+  //right leg
+  ctx.moveTo(200, 300);
+  ctx.lineTo(100, 360);
+  //left leg
+  ctx.moveTo(300, 360);
+  ctx.lineTo(200, 300);
+  //right arm
+  ctx.moveTo(100, 150);
+  ctx.lineTo(200, 200);
+  //left arm
+  ctx.moveTo(300, 150);
+  ctx.lineTo(200, 200);
+  ctx.stroke();
+  ctx.closePath();
+  </script>
+  </div>
+
+<footer>
+<p>Ricki Steiner</p>
+</footer>
+
+</body>
+</html>
